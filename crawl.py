@@ -43,7 +43,7 @@ def IntializeDataCSV():
 
 
 def ImportToDB():
-    conn = 'DRIVER={SQL Server Native Client 11.0};SERVER=ALPHAMINDS;DATABASE=Stock;UID=trader;PWD=trader'
+    conn = 'DRIVER={SQL Server Native Client 11.0};SERVER=localhost;DATABASE=Stock;UID=trader;PWD=trader'
     quoted = quote_plus(conn)
     new_con = 'mssql+pyodbc:///?odbc_connect={}'.format(quoted)
     engine = create_engine(new_con)
